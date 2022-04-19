@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     *,*::before,*::after {
@@ -6,21 +6,31 @@ const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --color-background-dark: #004643;
-        --color-background-light: #abd1c6;
-        --color-text-dark: #001e1d;
-        --color-text-white: #fffffe;
-        --color-text-lightgreen: #abd1c6;
-        --color-button: #f9bc60;
-        --color-button-hover: #f3a661;
-        --color-buttonText: #001e1d;
-        --color-stroke: #001e1d;
+        --color-background: #f3d2c1;
+        --color-headline: #001858;
+        --color-sub-headline: #172c66;
+        --color-card-background: #fef6e4:
+        --color-card-heading: #001858;
+        --color-card-paragraph: #172c66;
+
+        --color-stroke: #001858;
+        --color-main: #f3d2c1;
+        --color-highlight: #fef6e4;
         --color-tertiary: #e16162;
         --color-tertiary-hover: #E77862;
     }
 
+    html {
+    background-color: var(--color-highlight);
+    }
+
     body {
-    margin: 0;
+    margin: auto;
+    max-width: 667px;
+    min-width: 375px;
+    padding: auto;
+    text-align: center;
+    background-color: var(--color-background);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
         'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
         'Helvetica Neue', sans-serif;
