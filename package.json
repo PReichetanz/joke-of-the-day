@@ -20,7 +20,8 @@
     "htmlhint": "npx htmlhint \"**/*.html\"",
     "prettier:check": "npx prettier --check .",
     "prettier:write": "npx prettier --write .",
-    "stylelint": "npx stylelint \"**/*.css\""
+    "stylelint": "npx stylelint \"**/*.css\"",
+    "eslint": "npx eslint \"**/*.js\""
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.13.0",
     "htmlhint": "^1.1.4",
     "prettier": "^2.6.2",
     "stylelint": "^14.7.1",
