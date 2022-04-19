@@ -1,10 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import Header from './components/Header';
 
 export default function App(): JSX.Element {
-  return <Header>hello world</Header>;
+  return <Header>Witz des Tages</Header>;
 }
-
-const Header = styled.h1`
-  font-weight: 900;
-`;
