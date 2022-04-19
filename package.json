@@ -17,7 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "htmlhint": "npx htmlhint \"**/*.html\""
+    "htmlhint": "npx htmlhint \"**/*.html\"",
+    "prettier:check": "npx prettier --check .",
+    "prettier:write": "npx prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +40,7 @@
     ]
   },
   "devDependencies": {
-    "htmlhint": "^1.1.4"
+    "htmlhint": "^1.1.4",
+    "prettier": "^2.6.2"
   }
 }
