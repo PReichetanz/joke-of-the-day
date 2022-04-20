@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
         --color-background: #f3d2c1;
         --color-headline: #001858;
         --color-sub-headline: #172c66;
-        --color-card-background: #fef6e4:
+        --color-card-background: #fef6e4;
         --color-card-heading: #001858;
         --color-card-paragraph: #172c66;
 
@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     margin: auto;
     max-width: 667px;
     min-width: 375px;
+    height: 100vh;
     padding: auto;
     text-align: center;
     background-color: var(--color-background);

@@ -1,18 +1,19 @@
 import React from 'react';
-import type { ReactNode } from 'react';
 import styled from 'styled-components';
 
-type HeaderProps = {
-  children: ReactNode;
-};
-
-export default function Header({ children }: HeaderProps): JSX.Element {
+export default function Header(): JSX.Element {
   return (
-    <header>
-      <Heading>{children}</Heading>
-    </header>
+    <Headercontainer>
+      <Heading>Witz des Tages</Heading>
+    </Headercontainer>
   );
 }
+
+const Headercontainer = styled.header`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Heading = styled.h1`
   margin: 0;
