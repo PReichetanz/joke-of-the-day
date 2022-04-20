@@ -1,21 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import jokes from '../lib/jokes';
+import { Joke } from '../lib/types';
 import Card from './Card';
-import type { Joke } from '../lib/types';
 
-export default function JokeGenerator(): JSX.Element {
-  const [jokeOfTheDay, setJokeOfTheDay] = useState<Joke>({
-    id: '',
-    question: '',
-    answer: '',
-  });
+type JokeGeneratorProps = {
+  jokeOfTheDay: Joke;
+  onHandleRandomJoke: (randomJoke: Joke) => void;
+};
 
+export default function JokeGenerator({
+  jokeOfTheDay,
+  onHandleRandomJoke,
+}: JokeGeneratorProps): JSX.Element {
   useEffect(() => {
-    const randomIndex = getRandomIndex(0, jokes.length - 1);
-    setJokeOfTheDay(jokes[randomIndex]);
+    getRandomJoke();
   }, []);
 
   return <Card joke={jokeOfTheDay} />;
+
+  function getRandomJoke() {
+    const randomIndex = getRandomIndex(0, jokes.length - 1);
+    onHandleRandomJoke(jokes[randomIndex]);
+  }
 
   function getRandomIndex(min: number, max: number) {
     min = Math.ceil(min);
