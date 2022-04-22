@@ -16,8 +16,8 @@ const GlobalStyles = createGlobalStyle`
         --color-stroke: #001858;
         --color-main: #f3d2c1;
         --color-highlight: #fef6e4;
+        --color-secondary: #8bd3dd;
         --color-tertiary: #e16162;
-        --color-tertiary-hover: #E77862;
     }
 
     html {

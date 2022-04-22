@@ -19,7 +19,7 @@ export default function JokeOfTheDay(): JSX.Element {
         <JokeGenerator jokeOfTheDay={jokeOfTheDay} />
       </main>
       <footer>
-        <Button onClick={getRandomJoke}>Neuer Witz</Button>
+        <Button onClick={getRandomJoke}>Gib mir mehr!</Button>
       </footer>
     </PageContainer>
   );

@@ -9,7 +9,5 @@ type JokeGeneratorProps = {
 export default function JokeGenerator({
   jokeOfTheDay,
 }: JokeGeneratorProps): JSX.Element {
-  console.log('jokeOfTheDay in JokeGenerator', jokeOfTheDay);
-
   return <Card joke={jokeOfTheDay} />;
 }

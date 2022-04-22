@@ -6,14 +6,26 @@ type ButtonProps = {
 };
 
 const Button = styled.button<ButtonProps>`
-  background: var(--color-button);
+  background: var(--color-stroke);
+  color: var(--color-highlight);
   border-radius: 0.5rem;
-  border: 1px solid var(--color-stroke);
+  border: 3px solid var(--color-card-background);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   font-weight: 700;
-  padding: 0.5rem;
+  padding: 1rem;
   display: block;
-  width: 90%;
+  width: 80%;
   margin: auto;
+  &:hover {
+    background: var(--color-highlight);
+    color: var(--color-stroke);
+    border: 3px solid var(--color-stroke);
+    font-size: 1rem;
+  }
+  &:active {
+    background: var(--color-sub-headline);
+    color: var(--color-highlight);
+  }
 `;
 
 export default Button;
