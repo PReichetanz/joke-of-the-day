@@ -1,10 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import JokeOfTheDay from './pages/JokeOfTheDay';
 
 export default function App(): JSX.Element {
-  return <Header>hello world</Header>;
+  return <JokeOfTheDay />;
 }
-
-const Header = styled.h1`
-  font-weight: 900;
-`;
