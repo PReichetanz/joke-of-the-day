@@ -1,13 +1,16 @@
-import { useState } from 'react';
 import jokes from '../lib/jokes';
 import { Joke } from '../lib/types';
+import useLocalStorage from './useLocalStorage';
 
 export default function useJokes() {
-  const [jokeOfTheDay, setJokeOfTheDay] = useState<Joke>({
-    id: '',
-    question: '',
-    answer: '',
-  });
+  const [jokeOfTheDay, setJokeOfTheDay] = useLocalStorage<Joke>(
+    'jokeOfTheDay',
+    {
+      id: '',
+      question: '',
+      answer: '',
+    }
+  );
 
   function getRandomJoke() {
     const randomIndex = getRandomIndex(0, jokes.length - 1);
