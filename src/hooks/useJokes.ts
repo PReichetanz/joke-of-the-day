@@ -8,7 +8,10 @@ export default function useJokes() {
     question: '',
     answer: '',
   });
+  console.log('jokeOfTheDay:', jokeOfTheDay);
+
   function getRandomJoke() {
+    console.log('getRandomJoke was called');
     const randomIndex = getRandomIndex(0, jokes.length - 1);
     setJokeOfTheDay(jokes[randomIndex]);
   }

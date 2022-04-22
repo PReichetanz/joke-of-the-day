@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
-import useJokes from '../hooks/useJokes';
+import React from 'react';
+import { Joke } from '../lib/types';
 import Card from './Card';
 
-export default function JokeGenerator(): JSX.Element {
-  const { jokeOfTheDay, getRandomJoke } = useJokes();
+type JokeGeneratorProps = {
+  jokeOfTheDay: Joke;
+};
 
-  useEffect(() => {
-    getRandomJoke();
-  }, []);
+export default function JokeGenerator({
+  jokeOfTheDay,
+}: JokeGeneratorProps): JSX.Element {
+  console.log('jokeOfTheDay in JokeGenerator', jokeOfTheDay);
 
   return <Card joke={jokeOfTheDay} />;
 }
