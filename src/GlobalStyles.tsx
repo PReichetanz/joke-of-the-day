@@ -29,7 +29,6 @@ const GlobalStyles = createGlobalStyle`
     max-width: 667px;
     min-width: 375px;
     height: 100vh;
-    padding: auto;
     text-align: center;
     background-color: var(--color-background);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
