@@ -3,18 +3,18 @@ import { Joke } from '../lib/types';
 import useLocalStorage from './useLocalStorage';
 
 export default function useJokes() {
-  const [usedJokesId, setUsedJokesId] = useLocalStorage<string[]>(
+  const [usedJokesId, setUsedJokesId] = useLocalStorage<number[]>(
     'usedJokesId',
     []
   );
-  const [jokeIdsToBeUsed, setJokeIdsToBeUsed] = useLocalStorage<string[]>(
+  const [jokeIdsToBeUsed, setJokeIdsToBeUsed] = useLocalStorage<number[]>(
     'jokeIdsToBeUsed',
-    jokes.map(joke => joke.id) // set jokes.ids here as initial value?
+    jokes.map(joke => joke.id)
   );
   const [jokeOfTheDay, setJokeOfTheDay] = useLocalStorage<Joke>(
     'jokeOfTheDay',
     {
-      id: '',
+      id: 0,
       question: '',
       answer: '',
     }
