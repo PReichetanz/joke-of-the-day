@@ -21,7 +21,13 @@ export default function useJokes() {
   );
 
   function getRandomJoke() {
-    const randomIndex = getRandomIndex(0, jokeIdsToBeUsed.length - 1);
+    let randomIndex: number;
+    if (jokeIdsToBeUsed.length === 0) {
+      randomIndex = getRandomIndex(0, jokes.length - 1);
+    } else {
+      randomIndex = getRandomIndex(0, jokeIdsToBeUsed.length - 1);
+    }
+    console.log(randomIndex);
     let selectedJoke: Joke;
     if (usedJokesId.length === 0) {
       selectedJoke = jokes[randomIndex];
@@ -57,5 +63,5 @@ export default function useJokes() {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  return { jokeOfTheDay, getRandomJoke };
+  return { jokeOfTheDay, getRandomJoke, jokeIdsToBeUsed };
 }

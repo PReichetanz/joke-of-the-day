@@ -65,32 +65,32 @@ const jokes = [
     answer: '"Ja, ist ein Subwuffer."',
   },
   {
-    id: 13,
+    id: 14,
     question: 'Habe gestern zwei Biber beim Essen beobachtet.',
     answer: 'Es gab Steg.',
   },
   {
-    id: 14,
+    id: 15,
     question: 'Captain Kirk hat immer Brückentag.',
     answer: '',
   },
   {
-    id: 15,
+    id: 16,
     question: 'Welcher Vogel hat Darth Vader auf den Kopf gekackt?',
     answer: 'Der Star Wars.',
   },
   {
-    id: 16,
+    id: 17,
     question: '"Warum ist deine Wohnung so dreckig?"',
     answer: '"I don\'t care."',
   },
   {
-    id: 17,
+    id: 18,
     question: 'Für wen kauft ein Egoist Obst?',
     answer: 'Pfirsich!',
   },
   {
-    id: 18,
+    id: 19,
     question: 'Liberal als gar kein Fisch.',
     answer: '(wait for it)',
   },
