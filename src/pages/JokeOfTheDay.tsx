@@ -19,7 +19,7 @@ export default function JokeOfTheDay(): JSX.Element {
         <JokeGenerator jokeOfTheDay={jokeOfTheDay} />
       </main>
       <footer>
-        <Button onClick={getRandomJoke}>Neuer Witz</Button>
+        <Button onClick={getRandomJoke}>Gib mir mehr!</Button>
       </footer>
     </PageContainer>
   );
@@ -27,6 +27,6 @@ export default function JokeOfTheDay(): JSX.Element {
 
 const PageContainer = styled.div`
   display: grid;
-  grid-template-rows: 2fr 3fr 1fr;
+  grid-template-rows: 1fr 3fr 2fr;
   height: 100vh;
 `;
