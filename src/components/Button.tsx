@@ -6,10 +6,10 @@ type ButtonProps = {
 };
 
 const Button = styled.button<ButtonProps>`
-  background: var(--color-stroke);
-  color: var(--color-highlight);
+  background: var(--button-background);
+  color: var(--button-text);
   border-radius: 0.5rem;
-  border: 3px solid var(--color-highlight);
+  border: 3px solid var(--button-stroke);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
   font-weight: 700;
   padding: 1rem;
@@ -22,7 +22,7 @@ const Button = styled.button<ButtonProps>`
     border: 3px solid var(--color-stroke);
   }
   &:active {
-    background: var(--color-sub-headline);
+    background: var(--button-stroke);
     color: var(--color-highlight);
   }
 `;

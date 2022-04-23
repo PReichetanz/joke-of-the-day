@@ -30,4 +30,5 @@ const Headline = styled.h2`
 
 const Paragraph = styled.p`
   color: var(--color-card-paragraph);
+  font-weight: 600;
 `;

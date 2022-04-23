@@ -18,6 +18,10 @@ const GlobalStyles = createGlobalStyle`
         --color-highlight: #ff8906;
         --color-secondary: #f25f4c;
         --color-tertiary: #e53170;
+
+        --button-background: black;
+        --button-text: #fffffe;
+        --button-stroke: #2e2f3e;
     }
 
     html {
