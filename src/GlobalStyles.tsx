@@ -6,22 +6,22 @@ const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --color-background: #f3d2c1;
-        --color-headline: #001858;
-        --color-sub-headline: #172c66;
-        --color-card-background: #fef6e4;
-        --color-card-heading: #001858;
-        --color-card-paragraph: #172c66;
+        --color-background: #fffffe;
+        --color-headline: #0f0e17;
+        --color-sub-headline: #2e2f3e;
+        --color-card-background: #0f0e17;
+        --color-card-heading: #fffffe;
+        --color-card-paragraph: #a7a9be;
 
-        --color-stroke: #001858;
-        --color-main: #f3d2c1;
-        --color-highlight: #fef6e4;
-        --color-secondary: #8bd3dd;
-        --color-tertiary: #e16162;
+        --color-stroke: black;
+        --color-main: #fffffe;
+        --color-highlight: #ff8906;
+        --color-secondary: #f25f4c;
+        --color-tertiary: #e53170;
     }
 
     html {
-    background-color: var(--color-highlight);
+    background-color: var(--color-stroke);
     }
 
     body {
