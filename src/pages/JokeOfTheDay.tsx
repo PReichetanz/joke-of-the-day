@@ -6,7 +6,7 @@ import JokeGenerator from '../components/JokeGenerator';
 import useJokes from '../hooks/useJokes';
 
 export default function JokeOfTheDay(): JSX.Element {
-  const { jokeOfTheDay, getRandomJoke } = useJokes();
+  const { jokeOfTheDay, getRandomJoke, jokeIdsToBeUsed } = useJokes();
 
   useEffect(() => {
     getRandomJoke();
@@ -19,7 +19,13 @@ export default function JokeOfTheDay(): JSX.Element {
         <JokeGenerator jokeOfTheDay={jokeOfTheDay} />
       </main>
       <footer>
-        <Button onClick={getRandomJoke}>Gib mir mehr!</Button>
+        <p>Es gibt noch {jokeIdsToBeUsed.length} weitere Witze.</p>
+
+        {jokeIdsToBeUsed.length > 0 ? (
+          <Button onClick={getRandomJoke}>Gib mir mehr!</Button>
+        ) : (
+          <Button onClick={getRandomJoke}>Nochmal von vorn, bitte!</Button>
+        )}
       </footer>
     </PageContainer>
   );
