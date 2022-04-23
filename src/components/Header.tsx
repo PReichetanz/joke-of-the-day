@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default function Header(): JSX.Element {
   return (
     <Headercontainer>
-      <Heading>Witz des Tages</Heading>
+      <Heading>Flacher Witz:</Heading>
     </Headercontainer>
   );
 }
