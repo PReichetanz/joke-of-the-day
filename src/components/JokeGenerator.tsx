@@ -1,4 +1,3 @@
-import React from 'react';
 import { Joke } from '../lib/types';
 import Card from './Card';
 
