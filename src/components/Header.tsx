@@ -1,10 +1,14 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
-export default function Header(): JSX.Element {
+type HeaderProps = {
+  heading: ReactNode;
+};
+
+export default function Header({ heading }: HeaderProps): JSX.Element {
   return (
     <Headercontainer>
-      <Heading>Flacher Witz:</Heading>
+      <Heading>{heading}</Heading>
     </Headercontainer>
   );
 }
