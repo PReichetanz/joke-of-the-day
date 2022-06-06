@@ -1,8 +1,10 @@
-import jokes from '../lib/jokes';
+import defaultJokes from '../lib/jokes';
 import { Joke } from '../lib/types';
 import useLocalStorage from './useLocalStorage';
 
 export default function useJokes() {
+  const [jokes, setJokes] = useLocalStorage<Joke[]>('jokes', defaultJokes);
+
   const [usedJokesId, setUsedJokesId] = useLocalStorage<number[]>(
     'usedJokesId',
     []
@@ -20,6 +22,16 @@ export default function useJokes() {
     }
   );
 
+  function addNewJoke(question: string, answer: string) {
+    const newJoke = {
+      id: jokes.length + 1,
+      question: question,
+      answer: answer,
+    };
+    setJokes([...jokes, newJoke]);
+    setJokeIdsToBeUsed([...jokeIdsToBeUsed, newJoke.id]);
+  }
+
   function getRandomJoke() {
     let randomIndex: number;
     if (jokeIdsToBeUsed.length === 0) {
@@ -27,7 +39,6 @@ export default function useJokes() {
     } else {
       randomIndex = getRandomIndex(0, jokeIdsToBeUsed.length - 1);
     }
-    console.log(randomIndex);
     let selectedJoke: Joke;
     if (usedJokesId.length === 0) {
       selectedJoke = jokes[randomIndex];
@@ -63,5 +74,5 @@ export default function useJokes() {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  return { jokeOfTheDay, getRandomJoke, jokeIdsToBeUsed };
+  return { jokeOfTheDay, getRandomJoke, jokeIdsToBeUsed, addNewJoke };
 }

@@ -16,11 +16,6 @@ const Button = styled.button<ButtonProps>`
   display: block;
   width: 80%;
   margin: auto;
-  &:hover {
-    background: var(--color-highlight);
-    color: var(--color-stroke);
-    border: 3px solid var(--color-stroke);
-  }
   &:active {
     background: var(--button-stroke);
     color: var(--color-highlight);
